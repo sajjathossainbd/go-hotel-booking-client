@@ -7,6 +7,7 @@ import Register from "../pages/authentication/Register";
 import Rooms from "../pages/rooms/Rooms";
 import RoomeDetails from "../pages/rooms/RoomeDetails";
 import MyBookings from "../pages/myBookings/MyBookings";
+import ContactUs from "../pages/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/room-details",
         element: <RoomeDetails />,
+      },
+      {
+        path: "/contact-us",
+        element: <ContactUs />,
       },
       {
         path: "/my-bookings",
