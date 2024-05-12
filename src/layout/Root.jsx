@@ -6,7 +6,9 @@ function Root() {
   return (
     <div className="container mx-auto">
       <Navbar />
-      <Outlet />
+      <div className="min-h-[calc(100vh-332px)]">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );
