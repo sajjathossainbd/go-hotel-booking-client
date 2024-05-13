@@ -1,6 +1,6 @@
 function NewsLetter() {
   return (
-    <div className="flex flex-col gap-6 items-center my-10">
+    <div className="flex flex-col gap-6 items-center my-20">
       <div className="">
         <h2 className="text-3xl font-bold mb-2">
           Subscribe To Your Newsletter
