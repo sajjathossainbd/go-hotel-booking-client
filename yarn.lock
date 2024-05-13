@@ -2744,6 +2744,11 @@ pify@^2.3.0:
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
   integrity sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==
 
+pigeon-maps@^0.21.5:
+  version "0.21.5"
+  resolved "https://registry.yarnpkg.com/pigeon-maps/-/pigeon-maps-0.21.5.tgz#36ff7d8d4710a48e2013968c54d3edeb33597fd4"
+  integrity sha512-I3GjmplE2xwZ/BESlgfYiEJRWRFwxt8LHhwhdqLkPEqfpdwGza4EL+iFk/rHHqRC/ZEAo1p1LITw54+lEpZfvA==
+
 pirates@^4.0.1:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/pirates/-/pirates-4.0.6.tgz#3018ae32ecfcff6c29ba2267cbf21166ac1f36b9"

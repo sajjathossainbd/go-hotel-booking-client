@@ -1,8 +1,11 @@
+import HotelLocation from "../../components/home/HotelLocation";
 
 function Home() {
   return (
-    <div>Home</div>
-  )
+    <div>
+      <HotelLocation />
+    </div>
+  );
 }
 
-export default Home
+export default Home;
