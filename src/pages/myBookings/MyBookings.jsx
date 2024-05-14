@@ -19,7 +19,7 @@ function MyBookings() {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/my-booking/${id}`, {
+        fetch(`https://gohotel-booking-server.vercel.app//my-booking/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -90,9 +90,15 @@ function MyBookings() {
                     <div className="flex gap-4">
                       <Link to={`/update-tourists-spot/${book._id}`}>
                         <button className="btn btn-accent btn-xs">
-                          Update
+                          Update Date
                         </button>
                       </Link>
+                      <button
+                        className="btn btn-error btn-xs"
+                        onClick={() => handleDelete(book._id)}
+                      >
+                        Review
+                      </button>
                       <button
                         className="btn btn-error btn-xs"
                         onClick={() => handleDelete(book._id)}

@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/rooms"),
+        loader: () => fetch("https://gohotel-booking-server.vercel.app/rooms"),
       },
       {
         path: "/login",
@@ -32,13 +32,17 @@ const router = createBrowserRouter([
       {
         path: "/rooms",
         element: <Rooms />,
-        loader: () => fetch("http://localhost:5000/rooms"),
+        loader: () => fetch("hhttps://gohotel-booking-server.vercel.app/rooms"),
       },
       {
         path: "/room-details/:id",
-        element: <RoomeDetails />,
+        element: (
+          <PrivateRoute>
+            <RoomeDetails />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/rooms/${params.id}`),
+          fetch(`https://gohotel-booking-server.vercel.app/rooms/${params.id}`),
       },
       {
         path: "/contact-us",
@@ -51,7 +55,7 @@ const router = createBrowserRouter([
             <MyBookings />
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/my-booking"),
+        loader: () => fetch("https://gohotel-booking-server.vercel.app/my-booking"),
       },
     ],
   },

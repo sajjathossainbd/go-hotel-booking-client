@@ -18,7 +18,7 @@ function RoomeDetails() {
 
   const handleBookNow = () => {
     // send data to the server
-    fetch("http://localhost:5000/my-booking", {
+    fetch("https://gohotel-booking-server.vercel.app/my-booking", {
       method: "POST",
       headers: {
         "content-type": "application/json",
