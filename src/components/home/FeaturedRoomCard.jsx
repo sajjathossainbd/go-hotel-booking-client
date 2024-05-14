@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
 
-function FeaturedRoomCard({ room }) {
+function FeaturedRoomCard({ room, onBookNow }) {
   const { room_images, room_description } = room;
+  
+  const handleBookNow = () => {
+    onBookNow(room)
+  }
   return (
     <div>
       <div className="card bg-base-100 shadow-xl">
@@ -26,9 +29,9 @@ function FeaturedRoomCard({ room }) {
 
           {/* ending */}
           <div className="card-actions justify-end">
-            <Link to={``} className="btn btn-outline">
+            <button onClick={handleBookNow} className="btn btn-outline">
               Book Now
-            </Link>
+            </button>
           </div>
         </div>
       </div>

@@ -1,10 +1,10 @@
 import { Helmet } from "react-helmet-async";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function RoomeDetails() {
   const roomData = useLoaderData();
   const {
-    _id,
     room_description,
     price_per_night,
     room_size,
@@ -13,12 +13,33 @@ function RoomeDetails() {
     special_offers,
   } = roomData;
 
-  const { id } = useParams();
-
-  const handleAvailable = (id, availability) => {
-    console.log("click", id);
-    // availability = false
+  const handleBookNow = () => {
+    // send data to the server
+    fetch("http://localhost:5000/my-booking", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(roomData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "Booking Room Added Successfully",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+        } else {
+          alert("Failed to add Booking Room"); // Optionally, handle failure
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error); // Optionally, handle error
+      });
   };
+
   return (
     <>
       <Helmet>
@@ -55,7 +76,7 @@ function RoomeDetails() {
           </p>
           <Link to={``}>
             <button
-              onClick={() => handleAvailable(_id, availability)}
+              onClick={handleBookNow}
               className="btn bg-[#31C292] hover:bg-[#48a586] text-white mr-4 px-5 w-36 mt-6 border-none"
             >
               Book Now
