@@ -1,9 +1,10 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import FeaturedRoomCard from "./FeaturedRoomCard";
 import Swal from "sweetalert2";
 
 function FeaturedRooms() {
   const roomsData = useLoaderData();
+  const navigate = useNavigate();
 
   const handleOnBookNow = (room) => {
     // send data to the server
@@ -23,6 +24,7 @@ function FeaturedRooms() {
             icon: "success",
             confirmButtonText: "Ok",
           });
+          navigate("/my-bookings");
         } else {
           alert("Failed to add My Booking Room"); // Optionally, handle failure
         }

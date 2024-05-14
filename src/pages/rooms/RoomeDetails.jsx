@@ -1,9 +1,11 @@
 import { Helmet } from "react-helmet-async";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 function RoomeDetails() {
   const roomData = useLoaderData();
+  const navigate = useNavigate();
+
   const {
     room_description,
     price_per_night,
@@ -11,6 +13,7 @@ function RoomeDetails() {
     availability,
     room_images,
     special_offers,
+    reviews,
   } = roomData;
 
   const handleBookNow = () => {
@@ -31,6 +34,7 @@ function RoomeDetails() {
             icon: "success",
             confirmButtonText: "Ok",
           });
+          navigate("/my-bookings");
         } else {
           alert("Failed to add Booking Room"); // Optionally, handle failure
         }
@@ -74,6 +78,25 @@ function RoomeDetails() {
               {special_offers[0]}, {special_offers[1]}
             </span>
           </p>
+          <div className="">
+            <div className="border-b-[0.2px] border-solid my-2"></div>
+            {reviews.map((review) => (
+              <div key={review._id} className="bg-gray-50 p-6 rounded-lg mb-6">
+                <p className="text-lg">
+                  User:
+                  <span className="font-bold"> {review.user}</span>
+                </p>
+                <p className="text-lg">
+                  Rating:
+                  <span className="font-bold"> {review.rating}</span>
+                </p>
+                <p className="text-lg">
+                  Comment:
+                  <span className="font-bold"> {review.comment}</span>
+                </p>
+              </div>
+            ))}
+          </div>
           <Link to={``}>
             <button
               onClick={handleBookNow}
