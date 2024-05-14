@@ -17,17 +17,14 @@ function RoomeDetails() {
       <Helmet>
         <title>GoHotel Booking - Rooms Details</title>
       </Helmet>
+      <h2 className="text-4xl mb-8 mt-10 font-bold text-center font-playfair">
+        Room Details
+      </h2>
       <div className="grid lg:grid-cols-2 max-sm:px-6 gap-10 my-10 items-center justify-center">
         <div className=" rounded-lg flex items-center justify-center py-16">
           <img className="rounded-lg h-full" src={room_images} alt="" />
         </div>
         <div className="flex flex-col gap-2">
-          <div className="location flex gap-2">
-            {/* <CiLocationOn />
-            <p>
-              {location} ({country_name})
-            </p> */}
-          </div>
           <h2 className="text-2xl font-bold my-2">{room_description}</h2>
 
           <div className="border-b-[0.2px] border-solid my-2"></div>
