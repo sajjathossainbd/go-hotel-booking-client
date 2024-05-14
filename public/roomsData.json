@@ -1,0 +1,54 @@
+[
+    {
+      "room_description": "Deluxe Room with Ocean View",
+      "price_per_night": 250,
+      "room_size": "400 sq ft",
+      "availability": true,
+      "room_images": "https://i.ibb.co/k1ZBQKD/Deluxe-Room-with-Ocean-View.png",
+      "special_offers": ["Complimentary breakfast", "50% off on spa services"]
+    },
+    {
+      "room_description": "Executive Suite",
+      "price_per_night": 350,
+      "room_size": "600 sq ft",
+      "availability": false,
+      "room_images": "https://i.ibb.co/hFbLFSt/Executive-Suite.png",
+      "special_offers": ["Complimentary breakfast", "30% off on spa services"]
+    },
+    {
+      "room_description": "Family Room with Garden View",
+      "price_per_night": 300,
+      "room_size": "500 sq ft",
+      "availability": true,
+      "room_images": "https://i.ibb.co/V9VkHRN/Family-Room-with-Garden-View.png",
+      "special_offers": []
+    },
+    {
+      "room_description": "Standard Room",
+      "price_per_night": 150,
+      "room_size": "300 sq ft",
+      "availability": true,
+      "room_images": "https://i.ibb.co/GxW78B5/Standard-Room.png",
+      "special_offers": ["Complimentary breakfast", "40% off on spa services"]
+    },
+    {
+      "room_description": "Luxury Suite with City View",
+      "price_per_night": 500,
+      "room_size": "800 sq ft",
+      "availability": true,
+      "room_images": "https://i.ibb.co/WfVzzQ5/Luxury-Suite-with-City-View.png",
+      "special_offers": ["Free airport shuttle", "Complimentary minibar"]
+    },
+    {
+      "room_description": "Penthouse Suite",
+      "price_per_night": 1000,
+      "room_size": "1200 sq ft",
+      "availability": true,
+      "room_images": "https://i.ibb.co/yN4kJhJ/Penthouse-Suite.png",
+      "special_offers": [
+        "Private butler service",
+        "Exclusive access to rooftop lounge"
+      ]
+    }
+  ]
+  

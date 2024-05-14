@@ -1,8 +1,9 @@
+import { useLoaderData } from "react-router-dom";
 
 function RoomeDetails() {
-  return (
-    <div>RoomeDetails</div>
-  )
+  const roomData = useLoaderData();
+  console.log(roomData);
+  return <div>RoomeDetails</div>;
 }
 
-export default RoomeDetails
+export default RoomeDetails;
