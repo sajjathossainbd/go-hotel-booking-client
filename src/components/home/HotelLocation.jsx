@@ -7,6 +7,9 @@ function HotelLocation() {
   const color = `hsl(${hue % 360}deg 39% 70%)`;
   return (
     <div className="my-10">
+      <h2 className="text-4xl mb-8 mt-14 font-bold text-center font-playfair">
+        Hotel's Location
+      </h2>
       <Map height={300} defaultCenter={[42.2409, 83.2697]} defaultZoom={11}>
         <Marker
           width={50}

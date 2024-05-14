@@ -1,9 +1,10 @@
 import { Helmet } from "react-helmet-async";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 function RoomeDetails() {
   const roomData = useLoaderData();
   const {
+    _id,
     room_description,
     price_per_night,
     room_size,
@@ -11,7 +12,13 @@ function RoomeDetails() {
     room_images,
     special_offers,
   } = roomData;
-  console.log(roomData);
+
+  const { id } = useParams();
+
+  const handleAvailable = (id, availability) => {
+    console.log("click", id);
+    // availability = false
+  };
   return (
     <>
       <Helmet>
@@ -47,7 +54,10 @@ function RoomeDetails() {
             </span>
           </p>
           <Link to={``}>
-            <button className="btn bg-[#31C292] hover:bg-[#48a586] text-white mr-4 px-5 w-36 mt-6 border-none">
+            <button
+              onClick={() => handleAvailable(_id, availability)}
+              className="btn bg-[#31C292] hover:bg-[#48a586] text-white mr-4 px-5 w-36 mt-6 border-none"
+            >
               Book Now
             </button>
           </Link>
